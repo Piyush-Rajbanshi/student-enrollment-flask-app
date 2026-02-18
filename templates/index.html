@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Enrollment System</title>
+</head>
+<body>
+    <h1>Student Enrollment System</h1>
+
+    <h2>Add Student</h2>
+    <form action="/add_student" method="POST">
+        Name: <input type="text" name="name" required><br>
+        Email: <input type="email" name="email" required><br>
+        Year: <input type="number" name="year" required><br>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <h2>Add Course</h2>
+    <form action="/add_course" method="POST">
+        Course Name: <input type="text" name="course_name" required><br>
+        Duration (months): <input type="number" name="duration" required><br>
+        <button type="submit">Add Course</button>
+    </form>
+
+    <h2>Enroll Student</h2>
+    <form action="/enroll" method="POST">
+        Student ID: <input type="number" name="student_id" required><br>
+        Course ID: <input type="number" name="course_id" required><br>
+        Date: <input type="date" name="date" required><br>
+        <button type="submit">Enroll</button>
+    </form>
+
+    <h2>Enrollment List</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Date</th>
+        </tr>
+        {% for e in enrollments %}
+        <tr>
+            <td>{{ e[0] }}</td>
+            <td>{{ e[1] }}</td>
+            <td>{{ e[2] }}</td>
+            <td>{{ e[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
