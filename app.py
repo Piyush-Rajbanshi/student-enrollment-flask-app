@@ -49,7 +49,7 @@ def add_course():
     cursor = conn.cursor()
 
     cursor.execute(
-        "INSERT INTO courses (course_name, course_duration_months) VALUES (%s, %s)",
+        "INSERT INTO courses (course_name, course_duration_month) VALUES (%s, %s)",
         (name, duration)
     )
     conn.commit()
