@@ -43,16 +43,13 @@ cd student-enrollment-flask-app
 python3 -m venv venv
 source venv/bin/activate
 
-4. Install dependencies:
-pip install -r requirements.txt
+4. Configure your MySQL database in `db_connection.py`.
 
-5. Configure your MySQL database in `db_connection.py`.
-
-6. Run the application:
+5. Run the application:
 python app.py
 
 
-7. Open in browser:
+6. Open in browser:
 http://127.0.0.1:5000
 
 
